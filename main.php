@@ -3,32 +3,32 @@
 require 'connecttodb.php';  
 
 if(isset($_POST['word'])){
- //echo $_POST['word'];
-$word=$_POST['word']; //grabbing the value typed in the text box and storing in the variable.
+  //echo $_POST['word'];
+  $word=$_POST['word']; //grabbing the value typed in the text box and storing in the variable.
 
-if(!empty($word)){
- if(strlen($word)>55){
-   echo 'Max length exceeded';
- }else{
- 	$query="SELECT `words` FROM `wordstable`WHERE `words`='$word'";
- 	$query_run= mysql_query($query);
-    $query_num_rows=mysql_num_rows($query_run);
-    if($query_num_rows==1){
-    // check if the word already exists.
-      echo 'Word '.$word.' already exists';
-    }else{
-    // if not insert into the table.
-     $insert_query="INSERT INTO `wordstable` VALUES(' ','".mysql_real_escape_string($word)."',1)";
-     if($insert_queryrun=mysql_query($insert_query)){
-      echo 'Word '.$word.' is added to the collection';
-     }else{
-      echo 'Unable to add the word'.$word;
-     }// end of insert word block.
-    }// end of word exists block.
-  }// end of strlen block. 
-}else{
-  echo 'This field cannot be empty';
-}// end of not empty block 
+   if(!empty($word)){
+       if(strlen($word)>55){
+           echo 'Max length exceeded';
+       }else{
+ 	        $query="SELECT `words` FROM `wordstable`WHERE `words`='$word'";
+ 	        $query_run= mysql_query($query);
+   			$query_num_rows=mysql_num_rows($query_run);
+    			if($query_num_rows==1){
+    				// check if the word already exists.
+      				echo 'Word '.$word.' already exists';
+    			}else{
+    					// if not insert into the table.
+     				$insert_query="INSERT INTO `wordstable` VALUES(' ','".mysql_real_escape_string($word)."',1)";
+     					if($insert_queryrun=mysql_query($insert_query)){
+     						 echo 'Word '.$word.' is added to the collection';
+    					 }else{
+     						 echo 'Unable to add the word'.$word;
+    					 }// end of insert word block.
+    			}// end of word exists block.
+  			}// end of strlen block. 
+		}else{
+ 		 	echo 'This field cannot be empty';
+	}// end of not empty block 
  
 }// end of the isset block 
 
