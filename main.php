@@ -38,3 +38,6 @@ if(isset($_POST['word'])){
 Enter the words to store them in DB:<br> <input type="text" name="word" maxlength="55" value="<?php if(isset($word)){echo $word;} ?>"><br><br>
  <input type="submit" value="Add Word">
  </form>
+ <form method="POST" action="main.php">
+ <input type="submit" name="throw" value="Splash">
+ </form>
