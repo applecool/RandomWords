@@ -23,14 +23,14 @@ if(!empty($word)){
       echo 'Word '.$word.' is added to the collection';
      }else{
       echo 'Unable to add the word'.$word;
-     }
-    }
-  }
+     }// end of insert word block.
+    }// end of word exists block.
+  }// end of strlen block. 
 }else{
   echo 'This field cannot be empty';
-}
-// end of the isset block 
-}
+}// end of not empty block 
+ 
+}// end of the isset block 
 
 ?>
 
