@@ -38,7 +38,7 @@ if(isset($_POST['throw'])){
     $query_num_rows = mysql_num_rows($query_run);
     while($query_random= mysql_fetch_assoc($query_run)){
      
-        echo 'Your word is '.$query_random['words'].'<br>';   
+         echo "<p align='center'>Your word is <font color=blue font face='courier' size='6pt'><i>".$query_row['words']."</i></font></p><br>";   
     }// end of while loop.
 }// end of the isset block.
 
