@@ -32,6 +32,16 @@ if(isset($_POST['word'])){
  
 }// end of the isset block 
 
+if(isset($_POST['throw'])){
+  $ran_query = "SELECT `words` FROM `wordstable` ORDER BY RAND() LIMIT 1";
+   $query_run=mysql_query($ran_query);
+    $query_num_rows = mysql_num_rows($query_run);
+    while($query_row = mysql_fetch_assoc($query_run)){
+     
+        echo 'Your word is '.$query_row['words'].'<br>';   
+ }
+}
+
 ?>
 
 <form method="POST" action="main.php">
