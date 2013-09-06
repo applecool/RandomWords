@@ -33,14 +33,14 @@ if(isset($_POST['word'])){
 }// end of the isset block 
 
 if(isset($_POST['throw'])){
-   $ran_query = "SELECT `words` FROM `wordstable` ORDER BY RAND() LIMIT 1"; 
-   $query_run=mysql_query($ran_query);
+    $ran_query = "SELECT `words` FROM `wordstable` ORDER BY RAND() LIMIT 1"; //getting the random word from database.
+    $query_run=mysql_query($ran_query);
     $query_num_rows = mysql_num_rows($query_run);
     while($query_random= mysql_fetch_assoc($query_run)){
      
         echo 'Your word is '.$query_random['words'].'<br>';   
- }
-}
+    }// end of while loop.
+}// end of the isset block.
 
 ?>
 
