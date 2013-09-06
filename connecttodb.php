@@ -1,6 +1,6 @@
 <?php
 
-$conn_error = 'Couldn\'t connect!';
+$conn_error = 'Couldn\'t connect to the database!'; 
 
 $mysql_host = 'localhost';
 
