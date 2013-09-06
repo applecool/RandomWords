@@ -43,11 +43,12 @@ if(isset($_POST['throw'])){
 }// end of the isset block.
 
 ?>
-
+<!-- This is pile up button -->
 <form method="POST" action="main.php">
 Enter the words to store them in DB:<br> <input type="text" name="word" maxlength="55" value="<?php if(isset($word)){echo $word;} ?>"><br><br>
  <input type="submit" value="Add Word">
  </form>
+<!-- This is the Random word trigger -->
  <form method="POST" action="main.php">
  <input type="submit" name="throw" value="Splash">
  </form>
