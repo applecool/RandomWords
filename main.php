@@ -15,7 +15,7 @@ if(isset($_POST['word'])){
    			$query_num_rows=mysql_num_rows($query_run);
     			if($query_num_rows==1){
     				// check if the word already exists.
-      				echo 'Word '.$word.' already exists';
+      				echo 'Word <font color=red>'.$word.'</font> already exists';
     			}else{
     					// if not insert into the table.
      				$insert_query="INSERT INTO `wordstable` VALUES(' ','".mysql_real_escape_string($word)."',1)";
