@@ -20,7 +20,7 @@ if(isset($_POST['word'])){
     					// if not insert into the table.
      				$insert_query="INSERT INTO `wordstable` VALUES(' ','".mysql_real_escape_string($word)."',1)";
      					if($insert_queryrun=mysql_query($insert_query)){
-     						 echo 'Word '.$word.' is added to the collection';
+     						 echo 'Word <font color=green><i>'.$word.'</i></font> is added to the collection';
     					 }else{
      						 echo 'Unable to add the word'.$word;
     					 }// end of insert word block.
