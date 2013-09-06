@@ -1,0 +1,9 @@
+This is a reference file for my database structure.
+
+DB has only a single table called 'wordstable' with three columns "serial_no","words" and "count".
+
+The serial_no is an integer field with an auto increment attribute. It is the primary key.
+The words is an varchar field with max length of 55 characters.
+The count is an integer field.
+
+
