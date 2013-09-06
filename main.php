@@ -27,7 +27,7 @@ if(isset($_POST['word'])){
     			}// end of word exists block.
   			}// end of strlen block. 
 		}else{
- 		 	echo 'This field cannot be empty';
+ 		 	echo '<h3><font color=red>This field cannot be empty</font></h3>';
 	}// end of not empty block 
  
 }// end of the isset block 
