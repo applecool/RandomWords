@@ -44,6 +44,7 @@ if(isset($_POST['throw'])){
 
 ?>
 <html>
+<body background="assets/background.jpeg">
 <center>
 <!-- This is pile up button -->
 <form method="POST" action="main.php">
@@ -55,4 +56,5 @@ Enter the words to store them in DB:<br> <input type="text" name="word" maxlengt
  <input type="submit" name="throw" value="Splash">
  </form>
  </center>
+ <body>
 </html>
